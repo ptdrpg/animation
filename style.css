@@ -1,0 +1,115 @@
+@keyframes exo{
+  from {background-color: red;}
+  to {background-color: blue;}
+}
+
+@keyframes example{
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+@keyframes anim{
+  0% {background-color: lightcoral;}
+  25% {background-color: lightpink;}
+  50% {background-color: lightblue;}
+  100% {background-color: lightgreen;}
+}
+
+@keyframes move{
+  from {top: 0%;}
+  to {top: 400%; background-color: lightgreen;}
+}
+
+.division{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.div0{
+  animation-name: example;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+.mietsika{
+  grid-column: span 2 / span 2;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+div{
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  position: relative;
+  background-color: red;
+}
+
+.move{
+  animation: move 5s infinite;
+  animation-direction: alternate;
+}
+
+.box{
+  padding-left: 10px;
+  transition: width 2s;
+  border-radius: 0;
+}
+
+.box:hover{
+  width: 300px;
+  animation-name: anim;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.div1{animation-timing-function: linear;}
+.div2{animation-timing-function: ease;}
+.div3{animation-timing-function: ease-in;}
+.div4{animation-timing-function: ease-out;}
+.div5{animation-timing-function: ease-in-out;}
+
+p::before{
+  content: "before ";
+  color: lightgreen;
+}
+
+p::after{
+  content: " after";
+  color: lightgreen;
+}
+
+p:active{
+  background-color: yellow;
+  color: red;
+}
+
+p:nth-child(2){
+  color: red;
+}
+
+p:nth-last-child(1){
+  background-color: yellow;
+}
+
+p:nth-last-of-type(3){
+  background-color: lightseagreen;
+}
+
+p:nth-of-type(3){
+  background-color: lightgoldenrodyellow;
+}
+
+section:first-child{
+  background-color: brown;
+}
+
+input:checked{
+  width: 50px;
+  height: 50px;
+}
